@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Country from "../sub-country/country";
+import "./Tour.css";
 
 const Tour = () => {
     const [countries, setCountries] = useState([]);
@@ -14,9 +15,11 @@ const Tour = () => {
         <div>
             
             Name:{countries.length}
+            <div className="tour">
             {
                 countries.map(item=><Country key={item.cca2} country={item}></Country>)
             }
+           </div>
             
             
         </div>

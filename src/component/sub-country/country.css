@@ -1,0 +1,13 @@
+.country-border {
+  background-color: red;
+  border: 1px solid salmon;
+  margin-bottom: 10px;
+}
+.visited-color {
+  background-color: rgb(7, 34, 34);
+  color: aliceblue;
+}
+.non-visited-color {
+  background-color: cadetblue;
+  color: aliceblue;
+}
