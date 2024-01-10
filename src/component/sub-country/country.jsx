@@ -1,9 +1,10 @@
 
 import { useState } from 'react';
 import './country.css';
-const Country = ({ country,visitCountriesClick}) => {
-    // console.log(country)
+const Country = ({ country,visitCountriesClick,flagPicClick}) => {
+    console.log(country)
     console.log(visitCountriesClick)
+    console.log(flagPicClick)
     
     
     const { name, flags, population, cca2, } = country;
@@ -20,7 +21,8 @@ const Country = ({ country,visitCountriesClick}) => {
             <p><small>Code:{cca2}</small> </p>
             
             <button onClick={handleClick}>{visited ? 'visited' : 'Going'}</button><br />
-            <button onClick={()=>visitCountriesClick(country)} >Visited list</button>
+            <button onClick={() => visitCountriesClick(country)} >Visited list</button>
+            <button onClick={()=>flagPicClick(country)}>FlagPhoto</button>
             {
                 visited?"I am travel many country":"I am not going any country"
 

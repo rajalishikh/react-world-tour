@@ -5,6 +5,8 @@ import "./Tour.css";
 const Tour = () => {
     const [countries, setCountries] = useState([]);
     const [visitCountries, setVisitCountries] = useState([]);
+    const [flag, setFlag] = useState([]);
+
 
     const visitCountriesClick = (country) => {
         console.log(country);
@@ -12,6 +14,11 @@ const Tour = () => {
         const newCountries = [...visitCountries, country];
         setVisitCountries(newCountries)
 
+    }
+    const flagPicClick = (flag2) => {
+        const newFlag = [...flag, flag2];
+        setFlag(newFlag);
+        
     }
     
     useEffect(() => {
@@ -36,15 +43,19 @@ const Tour = () => {
                 }
                 
             </ol>
+            {/* show the flag pictuer */}
+            <h3>Here is the pictuer</h3>
+            {
+                flag.map(item3=><img key={item3.cca2} src={item3.flags.png} width='100px'></img>)
+            }
             <div className="tour">
+                {/* display the item  */}
            
 
             {
                     countries.map(item => <Country 
                         visitCountriesClick={visitCountriesClick}
-                       
-                       
-                        
+                        flagPicClick={flagPicClick}
                         key={item.cca2} country={item}></Country>)
                 }
                 
