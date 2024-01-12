@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import CountryDe from '../Country-Details/CountryDe';
 import './country.css';
 const Country = ({ country,visitCountriesClick,flagPicClick}) => {
     console.log(country)
@@ -27,6 +28,15 @@ const Country = ({ country,visitCountriesClick,flagPicClick}) => {
                 visited?"I am travel many country":"I am not going any country"
 
             }
+            <hr />
+
+            <CountryDe key={country.cca2} country={country}
+                visitCountriesClick={visitCountriesClick}
+                flagPicClick={flagPicClick}
+            
+            >
+
+            </CountryDe>
             
             
         </div>
